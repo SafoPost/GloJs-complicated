@@ -1,10 +1,31 @@
-let num = 266219;
-let a = num.toString();
-let newNum = a[0] * a[1] * a[2] * a[3] * a[4] * a[5];
+'use strict';
+let lang = 'en';
+let ruWeek = 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье';
+let enWeek = 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday';
 
-console.log(newNum);
+if (lang === 'ru') {
+  console.log(ruWeek)
+} else {
+  console.log(enWeek)
+};
 
-newNum **= 3;
-b = newNum.toString();
+switch (true) {
+  case (lang === 'ru'):
+    console.log(ruWeek);
+    break;
+  case (lang === 'en'):
+    console.log(enWeek);
+    break;
+};
 
-document.writeln(b[0], ' ', b[1]);
+let week = [
+  ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+  ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+];
+let result = lang === 'en' ? week[0] : week[1];
+console.log(result);
+
+let namePerson = prompt('Введите ваше имя:');
+let resultPerson = namePerson === 'Артем' ? 'Директор' :
+  namePerson === 'Максим' ? 'Преподаватель' : 'Студент';
+console.log(resultPerson);
