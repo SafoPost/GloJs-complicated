@@ -2,10 +2,12 @@
 
 const one = function (argument) {
   if (typeof argument === 'string') {
-    argument.trim();
+    argument = argument.trim();
     if (argument.lenght > 30) {
       argument.slice(0, 30);
-      console.log(argument.concat("..."))
+      console.log(argument + "...");
+    } else {
+      console.log(argument);
     }
   } else {
     console.log('Это не строка');
