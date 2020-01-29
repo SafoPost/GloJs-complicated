@@ -1,10 +1,15 @@
-let num = 266219;
-let a = num.toString();
-let newNum = a[0] * a[1] * a[2] * a[3] * a[4] * a[5];
+'use strict';
 
-console.log(newNum);
+const one = function (argument) {
+  if (typeof argument === 'string') {
+    argument.trim();
+    if (argument.lenght > 30) {
+      argument.slice(0, 30);
+      console.log(argument.concat("..."))
+    }
+  } else {
+    console.log('Это не строка');
+  }
+};
 
-newNum **= 3;
-b = newNum.toString();
-
-document.writeln(b[0], ' ', b[1]);
+one();
