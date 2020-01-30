@@ -3,9 +3,8 @@
 const one = function (argument) {
   if (typeof argument === 'string') {
     argument = argument.trim();
-    if (argument.lenght > 30) {
-      argument.slice(0, 30);
-      console.log(argument + "...");
+    if (argument.length > 30) {
+      console.log(argument.slice(0, 30) + "...");
     } else {
       console.log(argument);
     }
@@ -14,4 +13,4 @@ const one = function (argument) {
   }
 };
 
-one();
+one('    bfzjbnkjbnldkblkb lzjn    ');
